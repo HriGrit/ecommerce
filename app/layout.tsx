@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { ClerkProvider } from '@clerk/nextjs'
 
 import { ModalProvider } from '@/providers/modal-provider'
+import ToastProvider from '@/components/modals/toast-provider'
 
 import './globals.css'
 
@@ -19,6 +20,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body>
+          <ToastProvider />
           <ModalProvider />
           {children}
         </body>
